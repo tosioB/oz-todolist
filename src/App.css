@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todolist {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+form input {
+  width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form .add-btn {
+  margin-left: 8px;
+  white-space: nowrap;
+}
+.todos {
+  margin-top: 20px;
+}
+.todos li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 12px;
+  border-bottom: 1px solid #e1e1e1;
+  position: relative;
+}
+.todos li .content.complete {
+  text-decoration: line-through;
+}
+.todos li .edit-inp {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 224px;
+  height: 20px;
+}
+.todos li .btn-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.todos li .btn-box button {
+  white-space: nowrap;
 }
